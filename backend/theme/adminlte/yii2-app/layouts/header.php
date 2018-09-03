@@ -9,7 +9,7 @@ use backend\models\User;
 
 <header class="main-header">
 
-    <?= Html::a('<span class="logo-mini">APP</span><span class="logo-lg">' . Yii::$app->name . '</span>', Yii::$app->homeUrl, ['class' => 'logo']) ?>
+    <?= Html::a('<span class="logo-mini">APP</span><span class="logo-lg">' . "สำหรับผู้ดูแลระบบ" . '</span>', Yii::$app->homeUrl, ['class' => 'logo']) ?>
 
     <nav class="navbar navbar-static-top" role="navigation">
 
@@ -31,7 +31,7 @@ use backend\models\User;
                     <li><a class="animate" href="<?= Url::to(['site/login']);?>"><i class="fa fa-fw fa-sign-in"></i>เข้าสู่ระบบ</a></li>
                     <?php }else{ ?>
                     <li class="[ dropdown ]">
-                        <a href="#" class="[ dropdown-toggle ][ animate ]" data-toggle="dropdown">User Profile
+                        <a href="#" class="[ dropdown-toggle ][ animate ]" data-toggle="dropdown">สวัสดี
                             <?php $user = User::find()->where(['id'=> Yii::$app->user->identity->id])->one(); 
                                 echo "(" . $user->username . ")";?><span class="[ caret ]"></span></a>
                         <ul class="[ dropdown-menu ]" role="menu">
